@@ -1,0 +1,263 @@
+/* Ukuran default untuk layar yang lebih besar (desktop) */
+
+/* --- */
+
+/* Media Query untuk Layar Tablet (misalnya, lebar maksimal 768px) */
+@media (max-width: 768px) {
+    .container {
+        margin-left: 0; /* Hapus margin kiri untuk layar kecil */
+        max-width: 100%; /* Lebar penuh */
+        height: auto; /* Biarkan tinggi menyesuaikan konten */
+        padding-bottom: 0;
+    }
+
+    .intro-wrapper {
+        flex-direction: column; /* Tumpuk teks dan gambar secara vertikal */
+        padding: 20px 0;
+    }
+
+    .text-content {
+        margin-left: 0;
+        padding: 20px; /* Kurangi padding */
+        text-align: center; /* Pusatkan teks */
+        margin-top: 0;
+    }
+
+    .text-content h1 {
+        font-size: 60px; /* Kurangi ukuran font */
+        margin-left: 0;
+    }
+
+    .text-content p {
+        font-size: 25px; /* Kurangi ukuran font */
+        margin-left: 0;
+    }
+
+    .gambar img {
+        height: 500px; /* Kurangi tinggi gambar */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        flex-direction: column; /* Tumpuk item navbar */
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+        flex-direction: column; /* Tumpuk logo dan teks */
+    }
+
+    .logo-text, .logotext2 {
+        margin-top: 5px;
+        margin-left: 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .ulnavbar {
+        flex-direction: column; /* Tumpuk daftar navigasi */
+        padding: 0;
+    }
+
+    .linavbar {
+        margin: 10px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .page2, .page3, .page4, .page5 {
+        height: auto; /* Biarkan tinggi menyesuaikan konten */
+        padding: 20px 0; /* Tambahkan padding vertikal */
+    }
+
+    .isipage2 {
+        flex-direction: column;
+    }
+
+    .gambar2 {
+        padding-left: 0;
+    }
+
+    .gambar2 img {
+        height: 400px;
+        margin-left: 0;
+    }
+
+    .textpage2 {
+        margin-left: 0;
+        padding: 20px;
+        margin-top: 0;
+    }
+
+    .textpage2 h1, .textpage2 p, .biodata {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .isipage3 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Teks3 {
+        width: auto;
+        text-align: center;
+    }
+
+    .Teks3 h2 {
+        margin-left: 0;
+        font-size: 35px;
+    }
+
+    .gambarpage3 {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .gambar1 {
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    .teksgambar1 {
+        flex-direction: column;
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+    .teks1, .teks2, .teks3, .teks4 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10px;
+        padding: 15px 30px;
+        border-radius: 50px 50px 0px 0px;
+        text-align: center;
+    }
+
+    .page4 {
+        font-size: 50px;
+    }
+
+    .kontak p {
+        font-size: 24px;
+    }
+
+    .socialmedia {
+        flex-wrap: wrap; /* Izinkan ikon untuk membungkus ke baris berikutnya */
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .facebook, .instagram, .whatsapp, .tiktok, .linked {
+        margin: 10px; /* Berikan sedikit jarak antar ikon */
+        height: 50px;
+    }
+
+    .facebook {
+        margin-left: 10px; /* Sesuaikan margin agar terpusat */
+    }
+
+    .linked {
+        margin-right: 10px; /* Sesuaikan margin agar terpusat */
+    }
+
+    .email {
+        padding-top: 40px;
+        font-size: 16px;
+    }
+
+    .kebijakandansyarat {
+        flex-direction: column;
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .syarat {
+        padding-left: 0;
+        margin-top: 5px;
+    }
+}
+
+/* Media Query untuk Layar Mobile Kecil (misalnya, lebar maksimal 480px) */
+@media (max-width: 480px) {
+    .text-content h1 {
+        font-size: 40px;
+    }
+
+    .text-content p {
+        font-size: 20px;
+    }
+
+    .gambar img {
+        height: 300px;
+    }
+
+    .Btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .Btn:hover {
+        width: 200px; /* Kurangi lebar hover */
+    }
+
+    .Btn:hover .logout-icon {
+        width: 40%;
+    }
+
+    .Btn:hover .text {
+        font-size: 16px;
+    }
+
+    .textpage2 h1 {
+        font-size: 24px;
+    }
+
+    .textpage2 p {
+        font-size: 16px;
+    }
+
+    .biodata {
+        font-size: 20px;
+    }
+
+    .Teks3 h2 {
+        font-size: 30px;
+    }
+
+    .gambar1 {
+        height: 150px;
+    }
+
+    .teksgambar1 {
+        font-size: 20px;
+    }
+
+    .page4 {
+        font-size: 30px;
+    }
+
+    .kontak p {
+        font-size: 20px;
+    }
+
+    .facebook, .instagram, .whatsapp, .tiktok, .linked {
+        height: 40px;
+        margin: 5px;
+    }
+
+    .email {
+        font-size: 14px;
+    }
+}
