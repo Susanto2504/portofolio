@@ -1,263 +1,711 @@
-/* Ukuran default untuk layar yang lebih besar (desktop) */
+/* --- Base Styles (Mobile-First) --- */
+/* These styles apply to all screen sizes by default, especially small ones */
 
-/* --- */
-
-/* Media Query untuk Layar Tablet (misalnya, lebar maksimal 768px) */
-@media (max-width: 768px) {
-    .container {
-        margin-left: 0; /* Hapus margin kiri untuk layar kecil */
-        max-width: 100%; /* Lebar penuh */
-        height: auto; /* Biarkan tinggi menyesuaikan konten */
-        padding-bottom: 0;
-    }
-
-    .intro-wrapper {
-        flex-direction: column; /* Tumpuk teks dan gambar secara vertikal */
-        padding: 20px 0;
-    }
-
-    .text-content {
-        margin-left: 0;
-        padding: 20px; /* Kurangi padding */
-        text-align: center; /* Pusatkan teks */
-        margin-top: 0;
-    }
-
-    .text-content h1 {
-        font-size: 60px; /* Kurangi ukuran font */
-        margin-left: 0;
-    }
-
-    .text-content p {
-        font-size: 25px; /* Kurangi ukuran font */
-        margin-left: 0;
-    }
-
-    .gambar img {
-        height: 500px; /* Kurangi tinggi gambar */
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0;
-    }
-
-    .navbar {
-        flex-direction: column; /* Tumpuk item navbar */
-        align-items: center;
-        padding: 10px 0;
-    }
-
-    .logo {
-        margin-left: 0;
-        margin-bottom: 10px;
-        flex-direction: column; /* Tumpuk logo dan teks */
-    }
-
-    .logo-text, .logotext2 {
-        margin-top: 5px;
-        margin-left: 0;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .logo img {
-        height: 70px;
-    }
-
-    .ulnavbar {
-        flex-direction: column; /* Tumpuk daftar navigasi */
-        padding: 0;
-    }
-
-    .linavbar {
-        margin: 10px 0;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .page2, .page3, .page4, .page5 {
-        height: auto; /* Biarkan tinggi menyesuaikan konten */
-        padding: 20px 0; /* Tambahkan padding vertikal */
-    }
-
-    .isipage2 {
-        flex-direction: column;
-    }
-
-    .gambar2 {
-        padding-left: 0;
-    }
-
-    .gambar2 img {
-        height: 400px;
-        margin-left: 0;
-    }
-
-    .textpage2 {
-        margin-left: 0;
-        padding: 20px;
-        margin-top: 0;
-    }
-
-    .textpage2 h1, .textpage2 p, .biodata {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .isipage3 {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .Teks3 {
-        width: auto;
-        text-align: center;
-    }
-
-    .Teks3 h2 {
-        margin-left: 0;
-        font-size: 35px;
-    }
-
-    .gambarpage3 {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .gambar1 {
-        height: 200px;
-        margin-top: 20px;
-    }
-
-    .teksgambar1 {
-        flex-direction: column;
-        margin-top: 0;
-        font-size: 24px;
-    }
-
-    .teks1, .teks2, .teks3, .teks4 {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 10px;
-        padding: 15px 30px;
-        border-radius: 50px 50px 0px 0px;
-        text-align: center;
-    }
-
-    .page4 {
-        font-size: 50px;
-    }
-
-    .kontak p {
-        font-size: 24px;
-    }
-
-    .socialmedia {
-        flex-wrap: wrap; /* Izinkan ikon untuk membungkus ke baris berikutnya */
-        justify-content: center;
-        margin: 10px 0;
-    }
-
-    .facebook, .instagram, .whatsapp, .tiktok, .linked {
-        margin: 10px; /* Berikan sedikit jarak antar ikon */
-        height: 50px;
-    }
-
-    .facebook {
-        margin-left: 10px; /* Sesuaikan margin agar terpusat */
-    }
-
-    .linked {
-        margin-right: 10px; /* Sesuaikan margin agar terpusat */
-    }
-
-    .email {
-        padding-top: 40px;
-        font-size: 16px;
-    }
-
-    .kebijakandansyarat {
-        flex-direction: column;
-        padding-top: 10px;
-        text-align: center;
-    }
-
-    .syarat {
-        padding-left: 0;
-        margin-top: 5px;
-    }
+html {
+    margin: 0;
+    padding: 0;
 }
 
-/* Media Query untuk Layar Mobile Kecil (misalnya, lebar maksimal 480px) */
-@media (max-width: 480px) {
-    .text-content h1 {
-        font-size: 40px;
+body {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+    background-color: #000000;
+    height: auto; /* Changed from fixed height for responsiveness */
+    max-width: 100%; /* Allows it to take full width on small screens */
+    margin-left: 0; /* Remove fixed left margin for mobile */
+    padding-bottom: 20px; /* Adjust padding */
+    justify-content: space-between;
+    padding: 20px; /* Add general padding */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+
+.curriculum {
+    margin-top: 20px; /* Adjust margin for better mobile positioning */
+    margin-left: 0;
+    text-align: center; /* Center content for mobile */
+}
+
+.curriculum a {
+    text-decoration: none;
+}
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    border-radius: 60%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px white;
+    background-color: #9f1a1a;
+    margin: 20px auto; /* Center button horizontally on mobile */
+}
+
+.logout-icon {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-icon .logout {
+    width: 17px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.text {
+    position: relative;
+    align-items: center;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+    transition-duration: .3s;
+}
+
+.Btn:hover {
+    width: 200px; /* Adjust hover width for smaller screens */
+    border-radius: 40px;
+    transition-duration: .3s;
+}
+
+.Btn:hover .logout-icon {
+    width: 30%;
+    padding-left: 8px;
+    transition-duration: .3s;
+}
+
+.Btn:hover .text {
+    opacity: 1;
+    width: 70%; /* Adjust width for text on hover */
+    padding-right: 2px;
+    transition-duration: .3s;
+}
+
+.Btn:active {
+    transform: translate(3px, 3px);
+}
+
+/* INTRO WRAPPER */
+.intro-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+    padding: 20px 0; /* Adjust padding for mobile */
+    box-sizing: border-box;
+}
+
+.text-content {
+    align-items: center;
+    flex: none; /* Remove flex sizing for mobile as items are stacked */
+    margin: 0; /* Remove specific margins */
+    width: 90%; /* Adjust width for mobile */
+    padding: 20px; /* Adjust padding */
+    text-align: center; /* Center text content */
+    box-sizing: border-box;
+}
+
+.text-content h1 {
+    font-size: 50px; /* Smaller font size for mobile */
+    margin-bottom: 10px;
+    margin-left: 0; /* Remove fixed left margin */
+    color: #f4f4f4;
+}
+
+.text-content p {
+    font-size: 20px; /* Smaller font size for mobile */
+    line-height: 1.6;
+    margin-bottom: 5px;
+    color: #f4f4f4;
+    margin-left: 0; /* Remove fixed left margin */
+    font-family: "Pacifico", cursive;
+}
+
+.gambar {
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Ensure image wrapper takes full width */
+    box-sizing: border-box;
+}
+
+.gambar img {
+    height: auto; /* Make image height auto to maintain aspect ratio */
+    max-width: 90%; /* Ensure image doesn't overflow its container */
+    margin: 0; /* Remove specific margins */
+    padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    padding: 10px 20px; /* Adjust padding */
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+    margin-top: 0;
+    background-color: rgba(106, 105, 105, 0.138);
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 0; /* Adjust margin */
+    margin-bottom: 10px; /* Add space below logo */
+}
+
+.logo-text {
+    font-size: 1.5em; /* Adjust font size for better readability */
+    font-weight: bold;
+    color: red;
+    margin: 0; /* Reset margins */
+    font-family: "Dancing Script", cursive;
+}
+
+.logotext2 {
+    font-size: 1em; /* Adjust font size */
+    font-weight: bold;
+    color: white;
+    margin: 0; /* Reset margins */
+    font-family: "Dancing Script", cursive;
+}
+
+.ulnavbar {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Stack navigation items vertically */
+    align-items: center;
+    padding: 0;
+    width: 100%; /* Allow navigation to take full width */
+}
+
+.linavbar {
+    list-style-type: none;
+    color: white;
+    font-family: fantasy;
+    font-size: 18px; /* Adjust font size */
+    margin: 10px 0; /* Adjust margin */
+    padding: 0;
+    width: 100%; /* Ensure list item takes full width */
+    text-align: center; /* Center text within list item */
+}
+
+.linavbar a {
+    display: block; /* Make links block level for better tapping */
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.linavbar a:hover {
+    background-color: #9f1a1a;
+    border-radius: 50px;
+    padding-inline: 20px; /* Adjust padding on hover */
+}
+
+.logo img {
+    height: 80px; /* Adjust logo size */
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* PAGE 2 */
+.page2 {
+    background-color: #dcd5d5;
+    height: auto; /* Adjust height for content to fit */
+    padding-bottom: 40px; /* Add padding at bottom */
+    box-sizing: border-box;
+}
+
+.isipage2 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+}
+
+.gambar2 {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.gambar2 img {
+    height: auto;
+    max-width: 90%; /* Ensure image doesn't overflow */
+    margin: 0;
+    padding: 0;
+}
+
+.textpage2 {
+    align-items: center;
+    flex: none; /* Remove flex sizing */
+    margin: 0;
+    width: 90%;
+    padding: 20px;
+    text-align: center; /* Center text for mobile */
+    box-sizing: border-box;
+}
+
+.textpage2 h1 {
+    font-size: 25px; /* Smaller font for mobile */
+    margin-top: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 0; /* Remove fixed margin */
+}
+
+.textpage2 p {
+    font-size: 16px; /* Smaller font for mobile */
+    text-align: justify;
+    align-items: center;
+    margin-top: 10px;
+    font-family: cursive, 'Times New Roman', Times, serif;
+    margin-left: 0; /* Remove fixed margin */
+}
+
+.biodata {
+    font-size: 20px; /* Smaller font for mobile */
+    margin-left: 0; /* Remove fixed margin */
+    font-family: "Single Day", cursive;
+    margin-top: 10px;
+}
+
+/* PAGE 3 */
+.page3 {
+    background-color: #dcd5d5;
+    height: auto; /* Adjust height */
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.isipage3 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    justify-content: center;
+    height: auto;
+}
+
+.Teks3 {
+    width: 90%; /* Adjust width for mobile */
+    color: #000000;
+    text-align: center;
+    margin: 0 auto; /* Center text */
+    box-sizing: border-box;
+}
+
+.Teks3 h2 {
+    margin-top: 30px;
+    font-size: 30px; /* Smaller font for mobile */
+    font-family: cursive, 'Times New Roman', Times, serif;
+    margin-left: 0; /* Remove fixed margin */
+}
+
+.gambarpage3 {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.gambar1 {
+    display: flex;
+    height: auto;
+    width: 90%; /* Make images take up more width */
+    margin: 20px 0; /* Add spacing between images */
+    flex-direction: column; /* Stack image and text vertically within each .gambar1 */
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.gambar1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.teksgambar1 {
+    display: flex;
+    flex-direction: column; /* Stack text parts */
+    align-items: center;
+    margin-top: 20px; /* Adjust margin */
+    font-size: 18px; /* Smaller font for mobile */
+    font-family: cursive, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #4e390e;
+    text-align: center;
+}
+
+/* Adjusting .teks1, .teks2, .teks3, .teks4 for mobile */
+.teks1, .teks2, .teks3, .teks4 {
+    background-color: #ffc550;
+    border-radius: 50px 50px 0px 0px; /* Adjust border-radius for mobile */
+    border-bottom-style: dashed;
+    padding: 15px 20px; /* Adjust padding */
+    margin: 10px 0; /* Adjust margin */
+    width: 80%; /* Make them take up more width */
+    max-width: 300px; /* Optional: limit max width for better readability */
+    box-sizing: border-box;
+}
+
+/* PAGE 4 */
+.page4 {
+    background-color: #ffc550;
+    border-top-style: dashed;
+    border-color: #f4f4f4;
+    height: 300px; /* Adjust height for mobile */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 40px; /* Smaller font for mobile */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* PAGE 5 (Footer) */
+.page5 {
+    background-color: #000000;
+    height: auto; /* Adjust height */
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.kontak {
+    color: #dcd5d5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Stack contact info vertically */
+    align-items: center;
+    text-align: center;
+}
+
+.kontak p {
+    font-size: 20px; /* Smaller font for mobile */
+    margin-top: 15px;
+    font-family: cursive, monospace;
+}
+
+.socialmedia {
+    display: flex;
+    flex-wrap: wrap; /* Allow icons to wrap to next line */
+    justify-content: center;
+    margin: 10px;
+    height: auto;
+}
+
+.facebook, .instagram, .whatsapp, .tiktok, .linked {
+    display: flex;
+    height: 50px; /* Smaller icons for mobile */
+    margin: 5px; /* Add some spacing between icons */
+}
+
+.email {
+    color: #dcd5d5;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px; /* Adjust padding */
+    font-size: 14px; /* Smaller font for mobile */
+    text-align: center;
+}
+
+.kebijakandansyarat {
+    display: flex;
+    flex-direction: column; /* Stack horizontally on mobile */
+    justify-content: center;
+    color: #676666;
+    padding-top: 10px;
+    font-size: 12px; /* Smaller font for mobile */
+    text-align: center;
+}
+
+.kebijakan, .syarat {
+    display: flex;
+    margin: 5px 0; /* Add vertical spacing */
+    padding-left: 0;
+}
+
+/* --- Media Queries for larger screens (e.g., Tablets and Desktops) --- */
+
+/* Tablet layout (min-width: 768px) */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 700px; /* Adjust max-width for tablets */
+        margin: 0 auto; /* Center container */
+        padding: 40px;
     }
 
-    .text-content p {
-        font-size: 20px;
-    }
-
-    .gambar img {
-        height: 300px;
-    }
-
-    .Btn {
-        width: 40px;
-        height: 40px;
+    .curriculum {
+        margin-top: -200px; /* Revert some margin for tablets */
+        margin-left: 20px;
+        text-align: left;
     }
 
     .Btn:hover {
-        width: 200px; /* Kurangi lebar hover */
+        width: 300px;
     }
 
-    .Btn:hover .logout-icon {
-        width: 40%;
+    .intro-wrapper {
+        flex-direction: row; /* Layout items horizontally */
+        justify-content: space-between;
     }
 
-    .Btn:hover .text {
-        font-size: 16px;
+    .text-content {
+        flex: 3;
+        margin-left: -180px;
+        margin-top: -160px;
+        width: auto; /* Allow flex to control width */
+        padding: 200px;
+        padding-left: 100px; /* Adjust as needed */
+        padding-top: -90px;
+        text-align: left;
+    }
+
+    .text-content h1 {
+        font-size: 70px;
+        margin-left: -810px;
+    }
+
+    .text-content p {
+        font-size: 30px;
+        margin-left: -810px;
+    }
+
+    .gambar {
+        width: auto;
+    }
+
+    .gambar img {
+        height: 600px;
+        margin-top: -70px;
+        margin-right: 2px;
+        margin-left: 50px;
+        padding: 1px;
+        margin-left: -250px;
+    }
+
+    .navbar {
+        flex-direction: row; /* Layout items horizontally */
+        justify-content: space-between;
+        padding: 0.5px 10px;
+    }
+
+    .logo {
+        margin-left: 40px;
+        margin-bottom: 0;
+    }
+
+    .logo-text {
+        font-size: 1.2em;
+        margin-top: -40px;
+        margin-left: -25px;
+    }
+
+    .logotext2 {
+        font-size: 1.2em;
+        margin-top: 15px;
+        margin-left: -60px;
+    }
+
+    .ulnavbar {
+        flex-direction: row; /* Layout navigation items horizontally */
+        width: auto;
+    }
+
+    .linavbar {
+        font-size: 20px;
+        margin: 40px;
+        margin-top: 35px;
+        width: auto;
+        text-align: left;
+    }
+
+    .page2 {
+        height: 600px;
+    }
+
+    .isipage2 {
+        flex-direction: row;
+    }
+
+    .gambar2 {
+        padding-left: 300px;
+    }
+
+    .gambar2 img {
+        height: 700px;
+        margin-top: -50px;
+        margin-right: 2px;
+        margin-left: 50px;
+        padding: 1px;
+        margin-left: -250px;
+    }
+
+    .textpage2 {
+        margin-left: -110px;
+        margin-top: -160px;
+        padding: 200px;
+        padding-left: 200px;
+        padding-right: 20px;
+        padding-top: -150px;
+        text-align: left;
     }
 
     .textpage2 h1 {
-        font-size: 24px;
+        font-size: 30px;
+        margin-top: 60px;
+        margin-left: -105px;
     }
 
     .textpage2 p {
-        font-size: 16px;
+        font-size: 20px;
+        margin-left: -105px;
     }
 
     .biodata {
-        font-size: 20px;
+        font-size: 24px;
+        margin-left: -235px;
+        margin-top: -20px;
+    }
+
+    .page3 {
+        height: 508px;
+    }
+
+    .isipage3 {
+        flex-direction: row;
+        height: 250px;
+    }
+
+    .Teks3 {
+        width: 500px;
+        margin: 0;
+        text-align: left;
     }
 
     .Teks3 h2 {
-        font-size: 30px;
+        margin-top: 60px;
+        font-size: 45px;
+        margin-left: 120px;
+    }
+
+    .gambarpage3 {
+        flex-direction: row; /* Layout horizontally */
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 50px;
     }
 
     .gambar1 {
-        height: 150px;
+        height: 280px;
+        margin: 0;
+        margin-top: -15px;
+        flex-direction: column; /* Keep column for consistency with smaller screens */
     }
 
     .teksgambar1 {
-        font-size: 20px;
-    }
-
-    .page4 {
+        flex-direction: row;
+        margin-top: -80px;
         font-size: 30px;
     }
 
-    .kontak p {
-        font-size: 20px;
+    .teks1 {
+        margin-left: 40px;
+        width: auto;
     }
 
-    .facebook, .instagram, .whatsapp, .tiktok, .linked {
-        height: 40px;
-        margin: 5px;
+    .teks2 {
+        margin-left: 120px;
+        margin-right: 30px;
+        width: auto;
+    }
+
+    .teks3 {
+        margin-left: 65px;
+        margin-right: 55px;
+        width: auto;
+    }
+
+    .teks4 {
+        margin-right: 20px;
+        width: auto;
+    }
+
+    .page4 {
+        height: 800px;
+        font-size: 100px;
+    }
+
+    .page5 {
+        height: 250px;
+    }
+
+    .kontak {
+        flex-direction: row; /* Layout horizontally */
+    }
+
+    .socialmedia {
+        flex-wrap: nowrap; /* No wrapping for larger screens */
+        justify-content: space-between;
+    }
+
+    .facebook {
+        margin-left: 600px;
+    }
+
+    .linked {
+        margin-right: 600px;
     }
 
     .email {
-        font-size: 14px;
+        padding-top: 80px;
+        font-size: 18px;
+    }
+
+    .kebijakandansyarat {
+        flex-direction: row;
+        padding-top: 15px;
+    }
+
+    .syarat {
+        padding-left: 30px;
+    }
+}
+
+/* Desktop layout (min-width: 1024px) */
+@media only screen and (min-width: 1024px) {
+    .container {
+        max-width: 1000px; /* Adjust max-width for desktops */
+    }
+
+    /* Further adjustments for desktop if needed */
+    .text-content h1 {
+        font-size: 100px;
+    }
+
+    .text-content p {
+        font-size: 35px;
     }
 }
